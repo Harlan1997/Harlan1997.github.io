@@ -20,31 +20,34 @@
     var CONFIG = {"hostname":"harlan1997.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Student of CSE department, SUSTech">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Samuel Liang&#39;s Blog">
-<meta property="og:url" content="https://harlan1997.github.io/index.html">
+  <meta name="description" content="前言当年在上大学物理的时候的课程项目要求每个人都做一下物理学前沿知识的报告，我的小组选了Quantum Computation这一个课题。在这个报告中我主要负责Quantum Computation涉及到的一些基本的Quantum Mechanics的知识，其中的大部分内容总结自Dirac的《The Principles of Quantum Mechanics》和量子计算的bible《Quant">
+<meta property="og:type" content="article">
+<meta property="og:title" content="basic quantum theory">
+<meta property="og:url" content="https://harlan1997.github.io/2021/03/06/basic-quantum-theory/index.html">
 <meta property="og:site_name" content="Samuel Liang&#39;s Blog">
-<meta property="og:description" content="Student of CSE department, SUSTech">
+<meta property="og:description" content="前言当年在上大学物理的时候的课程项目要求每个人都做一下物理学前沿知识的报告，我的小组选了Quantum Computation这一个课题。在这个报告中我主要负责Quantum Computation涉及到的一些基本的Quantum Mechanics的知识，其中的大部分内容总结自Dirac的《The Principles of Quantum Mechanics》和量子计算的bible《Quant">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-03-06T09:17:21.000Z">
+<meta property="article:modified_time" content="2021-03-06T09:34:26.607Z">
 <meta property="article:author" content="Samuel Liang">
-<meta property="article:tag" content="AI, Network Security, Quantum Computation">
+<meta property="article:tag" content="quantum mechanics">
+<meta property="article:tag" content="quantum computation">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://harlan1997.github.io/">
+<link rel="canonical" href="https://harlan1997.github.io/2021/03/06/basic-quantum-theory/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Samuel Liang's Blog</title>
+  <title>basic quantum theory | Samuel Liang's Blog</title>
   
 
 
@@ -159,9 +162,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
@@ -177,10 +181,9 @@
       <meta itemprop="name" content="Samuel Liang's Blog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/06/basic-quantum-theory/" class="post-title-link" itemprop="url">basic quantum theory</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          basic quantum theory
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -220,7 +223,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>当年在上大学物理的时候的课程项目要求每个人都做一下物理学前沿知识的报告，我的小组选了Quantum Computation这一个课题。在这个报告中我主要负责Quantum Computation涉及到的一些基本的Quantum Mechanics的知识，其中的大部分内容总结自Dirac的《The Principles of Quantum Mechanics》和量子计算的bible《Quantum Computation and Quantum Information》。这是我这篇报告的由来。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>当年在上大学物理的时候的课程项目要求每个人都做一下物理学前沿知识的报告，我的小组选了Quantum Computation这一个课题。在这个报告中我主要负责Quantum Computation涉及到的一些基本的Quantum Mechanics的知识，其中的大部分内容总结自Dirac的《The Principles of Quantum Mechanics》和量子计算的bible《Quantum Computation and Quantum Information》。这是我这篇报告的由来。</p>
 <h2 id="正文部分"><a href="#正文部分" class="headerlink" title="正文部分"></a>正文部分</h2><h3 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h3><p>Quantum mechanics is the science of the<br>very small. It explains the behavior of matter and its<br>interactions with energy on the scale of atoms and<br>subatomic particles. By contrast, classical physics only<br>explains matter and energy on a scale familiar to human<br>experience, including the behavior of astronomical bodies<br>such as the Moon. Classical physics is still used in much<br>of modern science and technology. However, towards the<br>end of the 19th century, scientists discovered phenomena<br>in both the large (macro) and the small (micro) worlds<br>that classical physics could not explain.The desire to<br>resolve inconsistencies between observed phenomena and<br>classical theory led to two major revolutions in physics<br>that created a shift in the original scientific paradigm:<br>the theory of relativity and the development of quantum<br>mechanics</p>
 <h3 id="State"><a href="#State" class="headerlink" title="State"></a>State</h3><p>As in classical mechanics, the state of a particle at any given time is specified by two variables position an momentum. If we know these quantities, we can get all the information of the system we want to measure. For example, energy is just some function of position and momentum. We can calculate it if we know the position and momentum. However, this is impossible in quantum mechanics. In atom scale, according to the uncertainty principle, we can’t specify the position and momentum at the same time. How can can we specify the state of a system? By the Copenhagen interpretation, a state of a particle is completely specified by a complex wave function $\ket{\psi}$ and it is described to be a probability amplitude, whose square modulus gives the probability density of finding the particle at point x at time t.</p>
 <p>A mixture of quantum states is also a quantum state. Quantum states that cannot be writtten as a mixtrue of other states are called pure quantum states, all other states are called mixed quantum state.</p>
@@ -244,109 +247,45 @@
 <p>So far, we have assumed that the system is made of a single component. Suppose a system is made of two component: one in a Hilbert space $\mathcal{H}_1$ and another component in another Hilber space $\mathcal{H}<em>2$. Then the system as a whole live in a Hilbert space $\mathcal{H}=\mathcal{H}<em>1\otimes\mathcal{H}<em>2$. The general vector in this space is written as $\ket{\psi}=\sum</em>{i,j}c</em>{ij}\ket{e_1,i}\otimes\ket{e_2,j}$ where $\ket{e_a,i}$(a=1,2) is an orthonormal basis in $\mathcal{H}<em>a$ and $\sum</em>{i,}|c</em>{ij}|^2=1$. A state $\ket{\psi}\in\mathcal{H}$ written as a tensor product of two vector $\ket{\psi}=\ket{\psi_1}\otimes\ket{\psi_2}$ is called a tensor product state or a separable state. Non-separable states are called entangle state.</p>
 <p>The set of separate states have dimension $dim\mathcal{H}_1+dim\mathcal{H}_2$. The total space $\mathcal{H}$ has dimension $dim\mathcal{H}_1dim\mathcal{H}_2$.When the dimension of original Hilbert space is large,we have $dim\mathcal{H}_1dim\mathcal{H}_2$&gt;$dim\mathcal{H}_1+dim\mathcal{H}_2$. Then most states in the total space are entangled.</p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/quantum-mechanics/" rel="tag"># quantum mechanics</a>
+              <a href="/tags/quantum-computation/" rel="tag"># quantum computation</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://harlan1997.github.io/2021/03/06/%E7%94%A8Github-pages%E5%92%8CHexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/head_icon.png">
-      <meta itemprop="name" content="Samuel Liang">
-      <meta itemprop="description" content="Student of CSE department, SUSTech">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Samuel Liang's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/06/%E7%94%A8Github-pages%E5%92%8CHexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="post-title-link" itemprop="url">用Github pages和Hexo搭建自己的个人博客</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-03-06 01:37:23 / Modified: 15:10:31" itemprop="dateCreated datePublished" datetime="2021-03-06T01:37:23+08:00">2021-03-06</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/others/" itemprop="url" rel="index"><span itemprop="name">others</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2021/03/06/%E7%94%A8Github-pages%E5%92%8CHexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="post-meta-item leancloud_visitors" data-flag-title="用Github pages和Hexo搭建自己的个人博客" title="Views">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">Views: </span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><a target="_blank" rel="noopener" href="https://pages.github.com/">Github Pages</a>是一个静态站点托管服务, 用户可以可以从Github直接获取HTML, CSS, Java Script文件, 用户可以用这些文件来发布网页。<br><a target="_blank" rel="noopener" href="https://hexo.io/">Hexo.io</a>是一个基于Node.js的快速、简单、功能强大的博客框架。<br>本门将介绍如何使用Hexo + Github Pages搭建个人博客。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/03/06/%E7%94%A8Github-pages%E5%92%8CHexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/03/06/%E7%94%A8Github-pages%E5%92%8CHexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" rel="prev" title="用Github pages和Hexo搭建自己的个人博客">
+      <i class="fa fa-chevron-left"></i> 用Github pages和Hexo搭建自己的个人博客
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
 
           </div>
           
+    
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC81Mjg4Mi8yOTM1OQ=="></div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -393,6 +332,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E6%96%87%E9%83%A8%E5%88%86"><span class="nav-number">2.</span> <span class="nav-text">正文部分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Abstract"><span class="nav-number">2.1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#State"><span class="nav-number">2.2.</span> <span class="nav-text">State</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bracket-Notaion"><span class="nav-number">2.3.</span> <span class="nav-text">Bracket Notaion</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Wave-Function"><span class="nav-number">2.4.</span> <span class="nav-text">Wave Function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Superposition"><span class="nav-number">2.5.</span> <span class="nav-text">Superposition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Entanglement"><span class="nav-number">2.6.</span> <span class="nav-text">Entanglement</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -630,6 +570,21 @@
 
   
 
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
 
 </body>
 </html>
