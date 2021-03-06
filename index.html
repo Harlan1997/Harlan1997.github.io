@@ -75,7 +75,11 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/atom.xml" title="Samuel Liang's Blog" type="application/atom+xml">
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><link rel="alternate" href="/atom.xml" title="Samuel Liang's Blog" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -190,7 +194,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-03-06 17:17:21 / Modified: 17:48:41" itemprop="dateCreated datePublished" datetime="2021-03-06T17:17:21+08:00">2021-03-06</time>
+              <time title="Created: 2021-03-06 17:17:21 / Modified: 18:53:43" itemprop="dateCreated datePublished" datetime="2021-03-06T17:17:21+08:00">2021-03-06</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -220,7 +224,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>当年在上大学物理的时候的课程项目要求每个人都做一下物理学前沿知识的报告，我的小组选了Quantum Computation这一个课题。在这个报告中我主要负责Quantum Computation涉及到的一些基本的Quantum Mechanics的知识，其中的大部分内容总结自Dirac的《The Principles of Quantum Mechanics》和量子计算的bible《Quantum Computation and Quantum Information》。这是我这篇报告的由来。</p>
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>当年在上大学物理的时候的课程项目要求每个人都做一下物理学前沿知识的报告，我的小组选了Quantum Computation这一个课题。在这个报告中我主要负责Quantum Computation涉及到的一些基本的Quantum Mechanics的知识，其中的大部分内容总结自Dirac的《The Principles of Quantum Mechanics》和量子计算的bible《Quantum Computation and Quantum Information》。这是我这篇报告的由来。<br></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/03/06/basic-quantum-theory/#more" rel="contents">
@@ -302,7 +306,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><a target="_blank" rel="noopener" href="https://pages.github.com/">Github Pages</a>是一个静态站点托管服务, 用户可以可以从Github直接获取HTML, CSS, Java Script文件, 用户可以用这些文件来发布网页。<br><a target="_blank" rel="noopener" href="https://hexo.io/">Hexo.io</a>是一个基于Node.js的快速、简单、功能强大的博客框架。<br>本门将介绍如何使用Hexo + Github Pages搭建个人博客。</p>
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><a target="_blank" rel="noopener" href="https://pages.github.com/">Github Pages</a>是一个静态站点托管服务, 用户可以可以从Github直接获取HTML, CSS, Java Script文件, 用户可以用这些文件来发布网页。<br><a target="_blank" rel="noopener" href="https://hexo.io/">Hexo.io</a>是一个基于Node.js的快速、简单、功能强大的博客框架。<br>本门将介绍如何使用Hexo + Github Pages搭建个人博客。<br></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/03/06/%E7%94%A8Github-pages%E5%92%8CHexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more" rel="contents">
@@ -619,6 +623,59 @@
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'true';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
