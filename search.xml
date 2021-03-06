@@ -25,7 +25,7 @@
 </ul>
 <h2 id="安装配置Hexo"><a href="#安装配置Hexo" class="headerlink" title="安装配置Hexo"></a>安装配置Hexo</h2><ul>
 <li>找一个地方新建文件夹, 命名为hexo用来存放Hexo程序</li>
-<li>打开Git CMD 进入到hexo的文件夹(用Git Bash可能会碰到奇奇怪怪的问题 亲测)</li>
+<li>打开Git CMD 进入到hexo的文件夹(注意这里不是Git Bash, 如果用Git Bash可能会碰到奇奇怪怪的问题)</li>
 <li>npm安装hexo<br><code>npm install -g hexo-cli</code></li>
 <li>hexo文件下载<br><code>hexo init</code></li>
 <li>生成静态文件<br><code>hexo g</code></li>
