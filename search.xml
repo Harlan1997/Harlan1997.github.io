@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>用Github pages和Hexo搭建自己的个人博客</title>
+    <url>/2021/03/06/%E7%94%A8Github-pages%E5%92%8CHexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><a href="https://pages.github.com/">Github Pages</a>是一个静态站点托管服务, 用户可以可以从Github直接获取HTML, CSS, Java Script文件, 用户可以用这些文件来发布网页。<br><a href="https://hexo.io/">Hexo.io</a>是一个基于Node.js的快速、简单、功能强大的博客框架。<br>本门将介绍如何使用Hexo + Github Pages搭建个人博客。</p>
+<span id="more"></span>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>下载和安装Node.js和Git</p>
+<ul>
+<li>Node.js下载地址: <a href="https://nodejs.org/zh-cn">https://nodejs.org/zh-cn</a></li>
+<li>Git下载地址: <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></li>
+</ul>
+<h2 id="Git连接Github"><a href="#Git连接Github" class="headerlink" title="Git连接Github"></a>Git连接Github</h2><p>打开Git Bash</p>
+<ul>
+<li>设置用户名和邮箱<br><code>git config --global user.name &quot;你的GitHub用户名&quot;</code><br><code>git config --global user.email &quot;你的GitHub邮箱&quot;</code></li>
+<li>生成SSH密钥<br><code>ssh-keygen -t rsa -C &quot;你的GitHub邮箱&quot;</code></li>
+<li>为Github账户添加SSH密钥<br>公钥默认保存在 <code>C:\Users\用户名\.ssh</code>目录中, 用记事本打开 id_rsa.pub，复制内容。<br>点开github页面右上角头像,在Settings-&gt;SSH and GPG keys中点击New SSH key, 随便取个标题, 将复制的公钥粘贴进去, 点击Add SSH key </li>
+<li>验证连接<br>打开Git Bash, 输入<br><code>ssh -T git@github.com</code><br>如果显示”You’ve successfully authenticated, but…”则连接成功</li>
+</ul>
+<h2 id="创建Github-Pages-Repository"><a href="#创建Github-Pages-Repository" class="headerlink" title="创建Github Pages Repository"></a>创建Github Pages Repository</h2><ul>
+<li>点开github页面右上角旁边的加号，选择New repository</li>
+<li>Repository name填上 <code>用户名.github.io</code></li>
+<li>勾选 Add a README file</li>
+<li>点击 Create repository</li>
+</ul>
+<h2 id="安装配置Hexo"><a href="#安装配置Hexo" class="headerlink" title="安装配置Hexo"></a>安装配置Hexo</h2><ul>
+<li>找一个地方新建文件夹, 命名为hexo用来存放Hexo程序</li>
+<li>打开Git CMD 进入到hexo的文件夹(用Git Bash可能会碰到奇奇怪怪的问题 亲测)</li>
+<li>npm安装hexo<br><code>npm install -g hexo-cli</code></li>
+<li>hexo文件下载<br><code>hexo init</code></li>
+<li>生成静态文件<br><code>hexo g</code></li>
+<li>部署到本地服务器4000端口<br><code>hexo s</code><br>如果访问<code>http://localhost:4000</code>看到Hexo默认页面的Hello World则本地博客安装成功</li>
+</ul>
+<h2 id="部署Hexo到Github-Pages"><a href="#部署Hexo到Github-Pages" class="headerlink" title="部署Hexo到Github Pages"></a>部署Hexo到Github Pages</h2><ul>
+<li>安装hexo-deployer-git<br><code>npm install hexo-deployer-git --save</code></li>
+<li>修改博客配置文件<br>找到你的hexo文件夹里的_config.yml文件, 用记事本打开，在文件末尾找到Deployment部分，修改成：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line"> type: git</span><br><span class="line"> repository: git@github.com:你的用户名&#x2F;你的用户名.github.io.git</span><br><span class="line"> branch: main</span><br></pre></td></tr></table></figure></li>
+<li>部署<br><code>hexo d</code><br>打开你的博客站点<code>用户名.github.io</code>，如果跟本地静态一样显示Hexo的主题博客模板Hello World则部署成功</li>
+</ul>
+<h2 id="博客个性化设置"><a href="#博客个性化设置" class="headerlink" title="博客个性化设置"></a>博客个性化设置</h2><ul>
+<li>主题更换<ol>
+<li>到<a href="https://hexo.io/themes/">https://hexo.io/themes/</a>里面找一款喜欢的主题，点进去找到安装说明。</li>
+<li>比如我们想更换为nexT主题，我们只需要在Git Bash进入到hexo文件夹, 然后执行<br><code>git clone https://github.com/next-theme/hexo-theme-next themes/next</code></li>
+<li>如果文件下载成功我们会在hexo/themes里面找到next文件夹<br>我们只需要在hexo的_configu.yml文件里面Theme: 后面的landscape改成next</li>
+<li>执行<br><code>hexo clean</code><br><code>hexo g</code><br><code>hexo d</code><br>然后我们就可以把我们的博客成nexT主题</li>
+<li>后续的个性化设置比如增加社交联系方式，更换主题样式等等可以在theme\next_config.yml文件中修改，文件里注释写得很明白</li>
+<li>如需要更多的优化，可以在<a href="https://zhuanlan.zhihu.com/p/33616481">Hexo搭建的GitHub博客之优化大全</a>中找到</li>
+</ol>
+</li>
+</ul>
+<h2 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h2><ul>
+<li>在hexo目录下执行<br><code>hexo new &quot;name&quot;</code><br>该命令会在hexo\sorce_post下新建一个name.md文件,在这个md文件中写入内容</li>
+<li>执行<br><code>hexo g</code><br><code>hexo d</code><br>则可以发布</li>
+</ul>
+]]></content>
+      <categories>
+        <category>others</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Blog</tag>
+      </tags>
+  </entry>
+</search>
