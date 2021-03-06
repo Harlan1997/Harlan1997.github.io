@@ -78,6 +78,7 @@
 <li>执行<br><code>hexo clean</code><br><code>hexo g</code><br><code>hexo d</code><br>然后我们就可以把我们的博客成nexT主题</li>
 <li>后续的个性化设置比如增加社交联系方式，更换主题样式等等可以在theme\next_config.yml文件中修改，文件里注释写得很明白</li>
 <li>如需要更多的优化，可以在<a href="https://zhuanlan.zhihu.com/p/33616481">Hexo搭建的GitHub博客之优化大全</a>中找到</li>
+<li>要支持latex公式，可以按照<a href="https://wangcong.net/article/HexoWihLaTeX.html">Hexo中LaTeX公式渲染</a>中配置</li>
 </ol>
 </li>
 </ul>
