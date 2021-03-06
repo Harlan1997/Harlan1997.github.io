@@ -3,11 +3,11 @@
   <title>Samuel Liang&#39;s Blog</title>
   
   <subtitle>artificial noob</subtitle>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://harlan1997.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://harlan1997.github.io/"/>
   <updated>2021-03-06T07:10:31.638Z</updated>
-  <id>http://example.com/</id>
+  <id>https://harlan1997.github.io/</id>
   
   <author>
     <name>Samuel Liang</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>用Github pages和Hexo搭建自己的个人博客</title>
-    <link href="http://example.com/2021/03/06/%E7%94%A8Github-pages%E5%92%8CHexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://example.com/2021/03/06/%E7%94%A8Github-pages%E5%92%8CHexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</id>
+    <link href="https://harlan1997.github.io/2021/03/06/%E7%94%A8Github-pages%E5%92%8CHexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://harlan1997.github.io/2021/03/06/%E7%94%A8Github-pages%E5%92%8CHexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</id>
     <published>2021-03-05T17:37:23.000Z</published>
     <updated>2021-03-06T07:10:31.638Z</updated>
     
@@ -30,12 +30,12 @@
     
     
     
-    <category term="others" scheme="http://example.com/categories/others/"/>
+    <category term="others" scheme="https://harlan1997.github.io/categories/others/"/>
     
     
-    <category term="Hexo" scheme="http://example.com/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://harlan1997.github.io/tags/Hexo/"/>
     
-    <category term="Blog" scheme="http://example.com/tags/Blog/"/>
+    <category term="Blog" scheme="https://harlan1997.github.io/tags/Blog/"/>
     
   </entry>
   
