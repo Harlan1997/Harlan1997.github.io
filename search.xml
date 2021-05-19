@@ -204,6 +204,24 @@
 ]]></content>
   </entry>
   <entry>
+    <title>计算机网络</title>
+    <url>/2021/03/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</url>
+    <content><![CDATA[<h2 id="长连接和短连接"><a href="#长连接和短连接" class="headerlink" title="长连接和短连接"></a>长连接和短连接</h2><p>短连接：连接-&gt;传输数据-&gt;关闭连接<br>长连接：连接-&gt;传输数据-&gt;保持连接 -&gt; 传输数据-&gt; ……….-&gt;直到一方关闭连接，多是客户端关闭连接。</p>
+<h2 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h2><h3 id="定义：连接的传输层协议，提供面向事务的简单不可靠信息传送服务，其传输的单位是用户数据报。"><a href="#定义：连接的传输层协议，提供面向事务的简单不可靠信息传送服务，其传输的单位是用户数据报。" class="headerlink" title="定义：连接的传输层协议，提供面向事务的简单不可靠信息传送服务，其传输的单位是用户数据报。"></a>定义：连接的传输层协议，提供面向事务的简单不可靠信息传送服务，其传输的单位是用户数据报。</h3><h3 id="特征："><a href="#特征：" class="headerlink" title="特征："></a>特征：</h3><ul>
+<li>无连接</li>
+<li>尽力可靠</li>
+<li>没拥塞控制</li>
+<li>首部开销小</li>
+<li>支持一对多、多对多、多对一、一对一通信                            </li>
+</ul>
+<h2 id="滑窗协议"><a href="#滑窗协议" class="headerlink" title="滑窗协议"></a>滑窗协议</h2><p>发送端窗口里左边是已发送但未确认，右边是未发送。发送端一次性发多个分组，接收方只能对按序到达的分组中序列号最高的分组给出确认。如果没有发生丢失或超时，接收方不再保留按序保留的分组，接收端窗口向前移动，同时向发送端发送确认。发送端收到确认之后窗口也向前移动。如果接收端没有收到按序到达的分组，接收端会对按序到达序列号最高的分组给出确认。发送端收到确认移动窗口后，在一段时间后还没有收到接收端的确认，发送端就会重传这部分数据，直到收到确认为止。</p>
+<h2 id="GET-POST登陆上的区别"><a href="#GET-POST登陆上的区别" class="headerlink" title="GET POST登陆上的区别"></a>GET POST登陆上的区别</h2><ul>
+<li>GET是从服务器上获取数据，GET请求的数据会附在URL之后</li>
+<li>POST是向服务器提交数据，POST把提交的数据包含在请求体中</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
     <title>用Github pages和Hexo搭建自己的个人博客</title>
     <url>/2021/03/06/%E7%94%A8Github-pages%E5%92%8CHexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><a href="https://pages.github.com/">Github Pages</a>是一个静态站点托管服务, 用户可以可以从Github直接获取HTML, CSS, Java Script文件, 用户可以用这些文件来发布网页。<br><a href="https://hexo.io/">Hexo.io</a>是一个基于Node.js的快速、简单、功能强大的博客框架。<br>本门将介绍如何使用Hexo + Github Pages搭建个人博客。<br><span id="more"></span></p>
@@ -262,24 +280,6 @@
         <tag>Hexo</tag>
         <tag>Blog</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>计算机网络</title>
-    <url>/2021/03/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</url>
-    <content><![CDATA[<h2 id="长连接和短连接"><a href="#长连接和短连接" class="headerlink" title="长连接和短连接"></a>长连接和短连接</h2><p>短连接：连接-&gt;传输数据-&gt;关闭连接<br>长连接：连接-&gt;传输数据-&gt;保持连接 -&gt; 传输数据-&gt; ……….-&gt;直到一方关闭连接，多是客户端关闭连接。</p>
-<h2 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h2><h3 id="定义：连接的传输层协议，提供面向事务的简单不可靠信息传送服务，其传输的单位是用户数据报。"><a href="#定义：连接的传输层协议，提供面向事务的简单不可靠信息传送服务，其传输的单位是用户数据报。" class="headerlink" title="定义：连接的传输层协议，提供面向事务的简单不可靠信息传送服务，其传输的单位是用户数据报。"></a>定义：连接的传输层协议，提供面向事务的简单不可靠信息传送服务，其传输的单位是用户数据报。</h3><h3 id="特征："><a href="#特征：" class="headerlink" title="特征："></a>特征：</h3><ul>
-<li>无连接</li>
-<li>尽力可靠</li>
-<li>没拥塞控制</li>
-<li>首部开销小</li>
-<li>支持一对多、多对多、多对一、一对一通信                            </li>
-</ul>
-<h2 id="滑窗协议"><a href="#滑窗协议" class="headerlink" title="滑窗协议"></a>滑窗协议</h2><p>发送端窗口里左边是已发送但未确认，右边是未发送。发送端一次性发多个分组，接收方只能对按序到达的分组中序列号最高的分组给出确认。如果没有发生丢失或超时，接收方不再保留按序保留的分组，接收端窗口向前移动，同时向发送端发送确认。发送端收到确认之后窗口也向前移动。如果接收端没有收到按序到达的分组，接收端会对按序到达序列号最高的分组给出确认。发送端收到确认移动窗口后，在一段时间后还没有收到接收端的确认，发送端就会重传这部分数据，直到收到确认为止。</p>
-<h2 id="GET-POST登陆上的区别"><a href="#GET-POST登陆上的区别" class="headerlink" title="GET POST登陆上的区别"></a>GET POST登陆上的区别</h2><ul>
-<li>GET是从服务器上获取数据，GET请求的数据会附在URL之后</li>
-<li>POST是向服务器提交数据，POST把提交的数据包含在请求体中</li>
-</ul>
-]]></content>
   </entry>
   <entry>
     <title>链表知识总结</title>
