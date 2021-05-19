@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"harlan1997.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"harlan1997.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="Student of CSE department, SUSTech">
@@ -118,21 +118,6 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
-
-  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
@@ -165,10 +150,549 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://harlan1997.github.io/2021/03/26/%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Samuel Liang">
+      <meta itemprop="description" content="Student of CSE department, SUSTech">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Samuel Liang's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/26/%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">后端知识点总结</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-03-26 16:18:49 / Modified: 16:47:46" itemprop="dateCreated datePublished" datetime="2021-03-26T16:18:49+08:00">2021-03-26</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h3 id="线性结构"><a href="#线性结构" class="headerlink" title="线性结构"></a>线性结构</h3><ul>
+<li>线性表</li>
+<li>栈</li>
+<li>队列</li>
+<li>数组</li>
+</ul>
+<h3 id="链式结构"><a href="#链式结构" class="headerlink" title="链式结构"></a>链式结构</h3><ul>
+<li>单链表(链表和数组的区别)</li>
+<li>双向链表</li>
+<li>循环链表(约瑟夫环)</li>
+<li>双向循环链表</li>
+</ul>
+<h3 id="树"><a href="#树" class="headerlink" title="树"></a>树</h3><ul>
+<li>二叉树</li>
+<li>二叉搜索树</li>
+<li>AVL树</li>
+<li>红黑树</li>
+<li>B树</li>
+<li>B+树</li>
+</ul>
+<h3 id="图"><a href="#图" class="headerlink" title="图"></a>图</h3><ul>
+<li>邻接表</li>
+<li>临界矩阵</li>
+</ul>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><ul>
+<li>堆排序</li>
+<li>快速排序</li>
+<li>归并排序</li>
+<li>冒泡排序</li>
+<li>选择排序</li>
+<li>插入排序</li>
+</ul>
+<h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><ul>
+<li>顺序查找</li>
+<li>二分查找</li>
+<li>哈希查找</li>
+<li>二叉树查找</li>
+<li>红黑树查找</li>
+<li>B/B+树查找</li>
+</ul>
+<h3 id="图搜索"><a href="#图搜索" class="headerlink" title="图搜索"></a>图搜索</h3><ul>
+<li>BFS</li>
+<li>DFS</li>
+</ul>
+<h3 id="其它算法"><a href="#其它算法" class="headerlink" title="其它算法"></a>其它算法</h3><ul>
+<li>分治法</li>
+<li>动态规划</li>
+<li>贪心</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://harlan1997.github.io/2021/03/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Samuel Liang">
+      <meta itemprop="description" content="Student of CSE department, SUSTech">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Samuel Liang's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-title-link" itemprop="url">操作系统</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-03-20 19:22:08" itemprop="dateCreated datePublished" datetime="2021-03-20T19:22:08+08:00">2021-03-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-03-22 17:41:12" itemprop="dateModified" datetime="2021-03-22T17:41:12+08:00">2021-03-22</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="什么是同步-什么是异步"><a href="#什么是同步-什么是异步" class="headerlink" title="什么是同步 什么是异步"></a>什么是同步 什么是异步</h2><p>同步：必须等对方回应我，才开始做下一件事情<br>异步：不必等对方回应我，我继续做我的事情</p>
+<h2 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h2><p>资源分配的独立单位</p>
+<h2 id="进程间的通信方式"><a href="#进程间的通信方式" class="headerlink" title="进程间的通信方式"></a>进程间的通信方式</h2><ul>
+<li>管道</li>
+<li>信号量</li>
+<li>信号</li>
+<li>消息队列</li>
+<li>共享内存</li>
+<li>套接字</li>
+</ul>
+<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h2><p>资源调度的独立单位</p>
+<h2 id="线程间的通信方式"><a href="#线程间的通信方式" class="headerlink" title="线程间的通信方式"></a>线程间的通信方式</h2><ul>
+<li>锁 互斥锁 读写锁 自旋锁 条件变量</li>
+<li>信号量</li>
+<li>信号</li>
+<li>屏障</li>
+</ul>
+<h2 id="线程同步"><a href="#线程同步" class="headerlink" title="线程同步"></a>线程同步</h2><p>有一个线程在对内存进行操作的时候，其他线程都不可以对这个内存地址进行操作</p>
+<h1 id="协程"><a href="#协程" class="headerlink" title="协程"></a>协程</h1><p>实现协作式多任务，可以在程序执行内部中断，转而执行其它协程</p>
+<ul>
+<li>跟线程的区别：效率比线程高，因为切换不需要开销。不需要线程的锁机制。</li>
+</ul>
+<h2 id="多进程"><a href="#多进程" class="headerlink" title="多进程"></a>多进程</h2><p>计算机执行多个进程</p>
+<h2 id="进程调度算法"><a href="#进程调度算法" class="headerlink" title="进程调度算法"></a>进程调度算法</h2><ul>
+<li>先来先去</li>
+<li>短作业优先调度</li>
+<li>轮转法</li>
+<li>多级反馈队列</li>
+</ul>
+<h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><p>一个进程中同时有多个线程正在执行</p>
+<h2 id="多线程跟多进程的区别"><a href="#多线程跟多进程的区别" class="headerlink" title="多线程跟多进程的区别"></a>多线程跟多进程的区别</h2><ul>
+<li>多进程：编程、调试简单，可靠性高，但创建、销毁、切换速度慢、内存资源占用高。</li>
+<li>多线程：编程、调试复杂，可靠性差，但创建、销毁、切换速度快、内存资源占用低。</li>
+</ul>
+<h2 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h2><ul>
+<li>多个进程互相等待对方资源，循环等待。</li>
+</ul>
+<h2 id="产生死锁的原因"><a href="#产生死锁的原因" class="headerlink" title="产生死锁的原因"></a>产生死锁的原因</h2><ul>
+<li>资源互斥</li>
+<li>资源不可剥夺</li>
+<li>占有资源后还继续请求新的资源</li>
+<li>环路等待</li>
+</ul>
+<h2 id="破坏死锁"><a href="#破坏死锁" class="headerlink" title="破坏死锁"></a>破坏死锁</h2><p>破坏四个必要条件之一即可。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://harlan1997.github.io/2021/03/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Samuel Liang">
+      <meta itemprop="description" content="Student of CSE department, SUSTech">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Samuel Liang's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-title-link" itemprop="url">计算机网络</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-03-20 19:01:14" itemprop="dateCreated datePublished" datetime="2021-03-20T19:01:14+08:00">2021-03-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-14 10:33:15" itemprop="dateModified" datetime="2021-04-14T10:33:15+08:00">2021-04-14</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="长连接和短连接"><a href="#长连接和短连接" class="headerlink" title="长连接和短连接"></a>长连接和短连接</h2><p>短连接：连接-&gt;传输数据-&gt;关闭连接<br>长连接：连接-&gt;传输数据-&gt;保持连接 -&gt; 传输数据-&gt; ……….-&gt;直到一方关闭连接，多是客户端关闭连接。</p>
+<h2 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h2><h3 id="定义：连接的传输层协议，提供面向事务的简单不可靠信息传送服务，其传输的单位是用户数据报。"><a href="#定义：连接的传输层协议，提供面向事务的简单不可靠信息传送服务，其传输的单位是用户数据报。" class="headerlink" title="定义：连接的传输层协议，提供面向事务的简单不可靠信息传送服务，其传输的单位是用户数据报。"></a>定义：连接的传输层协议，提供面向事务的简单不可靠信息传送服务，其传输的单位是用户数据报。</h3><h3 id="特征："><a href="#特征：" class="headerlink" title="特征："></a>特征：</h3><ul>
+<li>无连接</li>
+<li>尽力可靠</li>
+<li>没拥塞控制</li>
+<li>首部开销小</li>
+<li>支持一对多、多对多、多对一、一对一通信                            </li>
+</ul>
+<h2 id="滑窗协议"><a href="#滑窗协议" class="headerlink" title="滑窗协议"></a>滑窗协议</h2><p>发送端窗口里左边是已发送但未确认，右边是未发送。发送端一次性发多个分组，接收方只能对按序到达的分组中序列号最高的分组给出确认。如果没有发生丢失或超时，接收方不再保留按序保留的分组，接收端窗口向前移动，同时向发送端发送确认。发送端收到确认之后窗口也向前移动。如果接收端没有收到按序到达的分组，接收端会对按序到达序列号最高的分组给出确认。发送端收到确认移动窗口后，在一段时间后还没有收到接收端的确认，发送端就会重传这部分数据，直到收到确认为止。</p>
+<h2 id="GET-POST登陆上的区别"><a href="#GET-POST登陆上的区别" class="headerlink" title="GET POST登陆上的区别"></a>GET POST登陆上的区别</h2><ul>
+<li>GET是从服务器上获取数据，GET请求的数据会附在URL之后</li>
+<li>POST是向服务器提交数据，POST把提交的数据包含在请求体中</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://harlan1997.github.io/2021/03/20/C-C++%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Samuel Liang">
+      <meta itemprop="description" content="Student of CSE department, SUSTech">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Samuel Liang's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/20/C-C++%E5%9F%BA%E7%A1%80/" class="post-title-link" itemprop="url">C/C++基础</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-03-20 14:26:11" itemprop="dateCreated datePublished" datetime="2021-03-20T14:26:11+08:00">2021-03-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-27 13:55:57" itemprop="dateModified" datetime="2021-04-27T13:55:57+08:00">2021-04-27</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="C-11-新特性"><a href="#C-11-新特性" class="headerlink" title="C++11 新特性"></a>C++11 新特性</h2><ul>
+<li>nullptr</li>
+<li>auto</li>
+<li>右值引用 移动语义</li>
+<li>正则表达式</li>
+</ul>
+<h1 id="struct-跟-class的区别"><a href="#struct-跟-class的区别" class="headerlink" title="struct 跟 class的区别"></a>struct 跟 class的区别</h1><p>struct是数据结构实现体，而class是对象实现体<br>最明显的一个区别是访问控制，struct是public的，class是private的</p>
+<h2 id="变量和对象"><a href="#变量和对象" class="headerlink" title="变量和对象"></a>变量和对象</h2><ul>
+<li>变量：内存在代码中可视化的一个符号</li>
+<li>对象：对象是指一块能存储数据并具有某种类型的内存空间</li>
+</ul>
+<h2 id="左值与右值"><a href="#左值与右值" class="headerlink" title="左值与右值"></a>左值与右值</h2><ul>
+<li>左值：表示可以取地址的，有名字的，非临时的对象，如非匿名对象，函数返回的引用，const对象等。</li>
+<li>右值：不能取地址的，没有名字的，临时的表达式，如立即数，函数返回值等。</li>
+</ul>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><ul>
+<li>定义：是给变量起的别名</li>
+<li>用法：<code>Type &amp;name = var</code>。声明引用时，必须用其它的变量进行初始化(说明引用是个常量)。引用作为函数的参数声明时不进行初始化。</li>
+<li>为什么需要引用？<br>引用作为其它变量的别名而存在，在一些场合可以替代指针。相对于指针来说引用具有更好的可读性和实用性。</li>
+<li>引用的本质：指针常量</li>
+</ul>
+<h2 id="匿名对象"><a href="#匿名对象" class="headerlink" title="匿名对象"></a>匿名对象</h2><p>匿名对象可以理解为是一个临时对象，一般系统自动生成的，如你的函数返回一个对象，这个对象在返回时会生成一个临时对象。相关代码执行完匿名对象就消失了。</p>
+<h2 id="左值引用"><a href="#左值引用" class="headerlink" title="左值引用"></a>左值引用</h2><p>就是对一个左值进行引用的类型。左值引用通常不能绑定右值。左值引用它可以接受非常量左值、常量左数值、右值对其进行初始化。左值引用要求右边的值必须能够取地址，如果无法取地址，可以用常引用；但使用常引用后，我们只能通过引用来读取数据，无法去修改据，因为其被const修饰成常量引用了。</p>
+<h2 id="右值引用"><a href="#右值引用" class="headerlink" title="右值引用"></a>右值引用</h2><p>右值引用是C++ 11新增的特性，右值引用用来绑定到右值，绑定到右值以后本来会被销毁的右值的生存期会延长至与绑定到它的右值引用的生存期。右值引用跟常引用的区别是，右值引用可以进行读写操作，而常引用只能进行读操作。右值引用通常不能绑定左值，要想绑定一个左值到右值引用，通常需要std::move()将左值强制转换为右值。</p>
+<ul>
+<li>为什么需要右值引用？<br>右值引用在你需要使用寄存器中的值的时候可以进行右值引用。寄存器的刷新速度很快，没有右值引用的话就需要将寄存器中的值拷贝到内存中，再进行使用，这是很浪费时间的。</li>
+<li>转移语义：将右值引用绑定到左值，避免多余的内存拷贝。std::move()</li>
+<li>完美转发：只有在需要的时候，才调用复制构造函数，左值被转发为左值，右值被转发为右值。std::forward()</li>
+</ul>
+<h2 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h2><p>储存地址的变量</p>
+<ul>
+<li>指针跟引用的区别<br>引用是指针常量，地址不能改变。指针没有这个限制。</li>
+</ul>
+<h2 id="智能指针"><a href="#智能指针" class="headerlink" title="智能指针"></a>智能指针</h2><p>智能指针是指向动态分配（堆）对象指针，用于生存期控制，能够确保自动正确的销毁动态分配的对象，防止内存泄露。它的一种通用实现技术是使用引用计数。每次使用它，内部的引用计数加1，每次析构一次，内部引用计数减1，减为0时，删除所指向的堆内存。智能指针包括：shared_ptr， unique_ptr， weak_ptr。<br>share_ptr：多个指针指向同一个对象，当最后一个指针离开作用域时，内存才会释放。<br>unique_ptr：资源只能被一个unique_ptr占有，当unique_ptr离开作用域，内存会被释放。如果资源被其它资源重写了，之前拥有的资源也会被释放。</p>
+<h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><p>把客观事物抽象成的类。</p>
+<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><p>消息以多种形态显示的能力，多态以封装和继承为基础。<br>C++多态实现：</p>
+<ul>
+<li>重载多态</li>
+<li>子类型多态</li>
+<li>参数多态</li>
+<li>强制多态</li>
+</ul>
+<h2 id="虚函数"><a href="#虚函数" class="headerlink" title="虚函数"></a>虚函数</h2><p>在某基类中声明为virtual，并在一个或多个派生类中被重新定义的成员函数。在基类中可以实现，可以不实现，它的作用是让这个函数能在子类中被覆盖，子类可以不重写。</p>
+<h2 id="纯虚函数"><a href="#纯虚函数" class="headerlink" title="纯虚函数"></a>纯虚函数</h2><p>只是一个接口，基类中不能有实现，子类要实现才可以实例化。</p>
+<h2 id="虚函数表"><a href="#虚函数表" class="headerlink" title="虚函数表"></a>虚函数表</h2><p>如果编译器发现基类中有虚函数，会自动为每个含有虚函数的类生成一份虚函数表，该表是一个一维数组，保存了虚函数的入口地址。编译器会在每个对象的前4个字节保存一个虚表指针，指向对象所属的虚表。在对象实例化时会</p>
+<h2 id="深拷贝-浅拷贝"><a href="#深拷贝-浅拷贝" class="headerlink" title="深拷贝 浅拷贝"></a>深拷贝 浅拷贝</h2><p>浅拷贝是对指针的拷贝<br>深拷贝是对指针和指针所指向内容</p>
+<h2 id="内存中堆栈的区别"><a href="#内存中堆栈的区别" class="headerlink" title="内存中堆栈的区别"></a>内存中堆栈的区别</h2><p>栈：由操作系统自动分配释放，存放函数的参数值、局部变量等的值，用于维护函数调用的上下文<br>堆：般由程序员分配释放，若程序员不释放，程序结束时可能由操作系统回收，用来容纳应用程序动态分配的内存区域</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://harlan1997.github.io/2021/03/10/%E9%93%BE%E8%A1%A8%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Samuel Liang">
+      <meta itemprop="description" content="Student of CSE department, SUSTech">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Samuel Liang's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/10/%E9%93%BE%E8%A1%A8%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">链表知识总结</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-03-10 02:33:57 / Modified: 03:00:53" itemprop="dateCreated datePublished" datetime="2021-03-10T02:33:57+08:00">2021-03-10</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="链表的定义"><a href="#链表的定义" class="headerlink" title="链表的定义"></a>链表的定义</h2><p>链表是一个线性的数据结构，存放链表的元素的地址是不连续的。链表的节点有两部分组成，分别是数据域和指针域。链表有单链表、双链表、单向循环链表、双向循环链表。<br><img src="/.io//linklist.png" alt="单链表"></p>
+<h2 id="链表的优点"><a href="#链表的优点" class="headerlink" title="链表的优点"></a>链表的优点</h2><ul>
+<li>动态分配内存</li>
+<li>易插入、删除</li>
+<li>无空间限制</li>
+<li>内存利用率高</li>
+</ul>
+<h2 id="链表的缺点"><a href="#链表的缺点" class="headerlink" title="链表的缺点"></a>链表的缺点</h2><ul>
+<li>指针域额外的空间开销</li>
+<li>不能随意访问节点</li>
+</ul>
+<h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><p>查找：O(n)<br>插入删除：O(1)</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://harlan1997.github.io/2021/03/07/%E2%80%9C%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0%E4%B8%8B%E7%9A%84%E5%AE%89%E5%85%A8%E7%9F%A9%E9%98%B5%E5%88%86%E8%A7%A3%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%E2%80%9D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Samuel Liang">
+      <meta itemprop="description" content="Student of CSE department, SUSTech">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Samuel Liang's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/07/%E2%80%9C%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0%E4%B8%8B%E7%9A%84%E5%AE%89%E5%85%A8%E7%9F%A9%E9%98%B5%E5%88%86%E8%A7%A3%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%E2%80%9D/" class="post-title-link" itemprop="url">“联邦学习下的安全矩阵分解论文笔记”</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-03-07 15:58:36" itemprop="dateCreated datePublished" datetime="2021-03-07T15:58:36+08:00">2021-03-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-03-09 19:20:56" itemprop="dateModified" datetime="2021-03-09T19:20:56+08:00">2021-03-09</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在大数据时代，数据是人工只能产业化中不可缺少的基石。随着数据的隐私和安全被越来越重视，很多国家都开始出台有关保护数据隐私的政策，这使得非常依赖数据的人工智能产业陷入了困境。如何在满足数据隐私、安全和监管要求的前提下，让人工智能系统能够更加高效、准确的共同使用各自的数据，是当前人工智能发展的一个重要课题。2016年，Google提出了Federated Learning(FL)的概念，旨在训练一个基于分布在各个用户的移动设备上个人信息的中心化模型。目前在FL上的工作已经有很多。本文将对FL在Matrix Factorization(MF)应用，Secure Federated Matrix Factorization进行介绍。</p>
+<h2 id="隐私信息泄露"><a href="#隐私信息泄露" class="headerlink" title="隐私信息泄露"></a>隐私信息泄露</h2><p>对于推荐算法来说，拿MF来说，有两类数据是被暴露出来的，一类是用户的raw </p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://harlan1997.github.io/2021/03/06/basic-quantum-theory/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/head_icon.png">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Samuel Liang">
       <meta itemprop="description" content="Student of CSE department, SUSTech">
     </span>
@@ -203,13 +727,6 @@
             </span>
 
           
-            <span id="/2021/03/06/basic-quantum-theory/" class="post-meta-item leancloud_visitors" data-flag-title="basic quantum theory" title="Views">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">Views: </span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
 
         </div>
       </header>
@@ -250,7 +767,7 @@
     <link itemprop="mainEntityOfPage" href="https://harlan1997.github.io/2021/03/06/%E7%94%A8Github-pages%E5%92%8CHexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/head_icon.png">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Samuel Liang">
       <meta itemprop="description" content="Student of CSE department, SUSTech">
     </span>
@@ -285,13 +802,6 @@
             </span>
 
           
-            <span id="/2021/03/06/%E7%94%A8Github-pages%E5%92%8CHexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="post-meta-item leancloud_visitors" data-flag-title="用Github pages和Hexo搭建自己的个人博客" title="Views">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">Views: </span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
 
         </div>
       </header>
@@ -383,8 +893,6 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Samuel Liang"
-      src="/images/head_icon.png">
   <p class="site-author-name" itemprop="name">Samuel Liang</p>
   <div class="site-description" itemprop="description">Student of CSE department, SUSTech</div>
 </div>
@@ -393,32 +901,22 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
-          
         <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-          
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/harlan1997" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;harlan1997" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:11711015@mail.sustech.edu.cn" title="E-Mail → mailto:11711015@mail.sustech.edu.cn" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
 
 
 
@@ -447,11 +945,8 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Samuel Liang</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
-
-
-    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
         
 
@@ -460,97 +955,6 @@
 
 
 
-<script>
-  (function() {
-    function leancloudSelector(url) {
-      url = encodeURI(url);
-      return document.getElementById(url).querySelector('.leancloud-visitors-count');
-    }
-
-    function addCount(Counter) {
-      var visitors = document.querySelector('.leancloud_visitors');
-      var url = decodeURI(visitors.id);
-      var title = visitors.dataset.flagTitle;
-
-      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
-        .then(response => response.json())
-        .then(({ results }) => {
-          if (results.length > 0) {
-            var counter = results[0];
-            leancloudSelector(url).innerText = counter.time + 1;
-            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
-              .catch(error => {
-                console.error('Failed to save visitor count', error);
-              });
-          } else {
-              Counter('post', '/classes/Counter', { title, url, time: 1 })
-                .then(response => response.json())
-                .then(() => {
-                  leancloudSelector(url).innerText = 1;
-                })
-                .catch(error => {
-                  console.error('Failed to create', error);
-                });
-          }
-        })
-        .catch(error => {
-          console.error('LeanCloud Counter Error', error);
-        });
-    }
-
-    function showTime(Counter) {
-      var visitors = document.querySelectorAll('.leancloud_visitors');
-      var entries = [...visitors].map(element => {
-        return decodeURI(element.id);
-      });
-
-      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
-        .then(response => response.json())
-        .then(({ results }) => {
-          for (let url of entries) {
-            let target = results.find(item => item.url === url);
-            leancloudSelector(url).innerText = target ? target.time : 0;
-          }
-        })
-        .catch(error => {
-          console.error('LeanCloud Counter Error', error);
-        });
-    }
-
-    let { app_id, app_key, server_url } = {"enable":true,"app_id":"AeP2TrOu9R6FPEm8A3qo56li-gzGzoHsz","app_key":"FS9oWXqewnLNPFtR6kzDyKpU","server_url":null,"security":false};
-    function fetchData(api_server) {
-      var Counter = (method, url, data) => {
-        return fetch(`${api_server}/1.1${url}`, {
-          method,
-          headers: {
-            'X-LC-Id'     : app_id,
-            'X-LC-Key'    : app_key,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data)
-        });
-      };
-      if (CONFIG.page.isPost) {
-        if (CONFIG.hostname !== location.hostname) return;
-        addCount(Counter);
-      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
-        showTime(Counter);
-      }
-    }
-
-    let api_server = app_id.slice(-9) !== '-MdYXbMMI' ? server_url : `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com`;
-
-    if (api_server) {
-      fetchData(api_server);
-    } else {
-      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
-        .then(response => response.json())
-        .then(({ api_server }) => {
-          fetchData('https://' + api_server);
-        });
-    }
-  })();
-</script>
 
 
       </div>
@@ -567,7 +971,7 @@
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/pisces.js"></script>
+<script src="/js/schemes/muse.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
@@ -576,31 +980,6 @@
 
 
   
-  <script>
-    (function(){
-      var canonicalURL, curProtocol;
-      //Get the <link> tag
-      var x=document.getElementsByTagName("link");
-		//Find the last canonical URL
-		if(x.length > 0){
-			for (i=0;i<x.length;i++){
-				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
-					canonicalURL=x[i].href;
-				}
-			}
-		}
-    //Get protocol
-	    if (!canonicalURL){
-	    	curProtocol = window.location.protocol.split(':')[0];
-	    }
-	    else{
-	    	curProtocol = canonicalURL.split(':')[0];
-	    }
-      //Get current URL if the canonical URL does not exist
-	    if (!canonicalURL) canonicalURL = window.location.href;
-	    //Assign script content. Replace current URL with the canonical URL
-      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
-  </script>
 
 
 
@@ -619,62 +998,6 @@
   
 
   
-      
-
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
-
-  
-
 
 </body>
 </html>
