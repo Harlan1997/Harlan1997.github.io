@@ -6,7 +6,7 @@
   <link href="https://harlan1997.github.io/atom.xml" rel="self"/>
   
   <link href="https://harlan1997.github.io/"/>
-  <updated>2021-03-26T08:47:46.108Z</updated>
+  <updated>2021-10-20T07:56:22.494Z</updated>
   <id>https://harlan1997.github.io/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>彻底理解Message Queue(MQ)</title>
+    <link href="https://harlan1997.github.io/2021/10/20/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3Message-Queue-MQ/"/>
+    <id>https://harlan1997.github.io/2021/10/20/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3Message-Queue-MQ/</id>
+    <published>2021-10-20T07:56:22.000Z</published>
+    <updated>2021-10-20T07:56:22.494Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>后端知识点总结</title>
