@@ -6,7 +6,7 @@
   <link href="https://harlan1997.github.io/atom.xml" rel="self"/>
   
   <link href="https://harlan1997.github.io/"/>
-  <updated>2021-10-20T08:21:29.620Z</updated>
+  <updated>2021-10-20T08:19:43.885Z</updated>
   <id>https://harlan1997.github.io/</id>
   
   <author>
@@ -15,26 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>彻底理解消息队列</title>
-    <link href="https://harlan1997.github.io/2021/10/20/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/"/>
-    <id>https://harlan1997.github.io/2021/10/20/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/</id>
-    <published>2021-10-20T08:12:59.000Z</published>
-    <updated>2021-10-20T08:21:29.620Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="彻底理解Message-Queue-MQ"><a href="#彻底理解Message-Queue-MQ" class="headerlink" title="彻底理解Message Queue(MQ)"></a>彻底理解Message Queue(MQ)</h1><h2 id="一、什么是MQ"><a href="#一、什么是MQ" class="headerlink" title="一、什么是MQ"></a>一、什么是MQ</h2><p>MQ是消息在传输过程中保存消息的容器，本质上是个队列。生产者发送消息到MQ中排队，然后由消费者接收消息并进行处理。</p><h3 id="1、原始模型"><a href="#1、原始模型" class="headerlink" title="1、原始模型"></a>1、原始模型</h3><p><img src="/2021/10/20/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/\image-20210828001029404.png" alt="image-20210828001029404"></p><p>原始模型允许多个生产者把消息存到队列里，但是一个消息只能被一个消费者接受，因为消息出队后就没有了。因此原始模型不适于生产者将消息分发给各个消费者。</p><h3 id="2、发布-订阅模型"><a href="#2、发布-订阅模型" class="headerlink" title="2、发布-订阅模型"></a>2、发布-订阅模型</h3><p><img src="/2021/10/20/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/\image-20210828002901708.png" alt="image-20210828002901708"></p><p>在发布-订阅模型中，原来的队列变得跟主题一样，只有消费者订阅了主题，才能接收到这个主题的全量信息。</p><h2 id="二、MQ的作用"><a href="#二、MQ的作用" class="headerlink" title="二、MQ的作用"></a>二、MQ的作用</h2><h3 id="1、异步"><a href="#1、异步" class="headerlink" title="1、异步"></a>1、异步</h3><p><img src="/2021/10/20/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/\image-20210828154746882.png" alt="image-20210828154746882"></p><p>对于一些复杂的业务系统，一次请求可能会同步调用多个系统的接口。每调用一个系统接口都要等待结果返回才继续调用下一个系统接口。直到所有的结果都返回了，整个流程才走完，这样耗时是非常多的。</p><p><img src="/2021/10/20/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/\image-20210828160441522.png" alt="image-20210828160441522"></p><p>引入了MQ之后，生产者发送消息后立即返回，可以继续做别的事情，无需等待消费者的返回，消费者会独立完成所有的业务逻辑(这些操作就是异步调用消费者接口)。这样做提高了系统的响应速度和吞吐量。</p><h3 id="2、解耦"><a href="#2、解耦" class="headerlink" title="2、解耦"></a>2、解耦</h3><p>生产者只需要将消息写进主题(队列)中，对消费者是什么样的，是不是需要这个消息根本不关心。消费者如果需要这个消息，只需要订阅主题(调用读消息接口)，不需要对生产者做任何改变。服务之间进行解耦，可以减少服务之间的影响，提高了系统的稳定性和可扩展性。</p><h3 id="3、削峰"><a href="#3、削峰" class="headerlink" title="3、削峰"></a>3、削峰</h3><p>机器同时处理请求的能力是有限的，在高并发的情况下，把消息写到队列里面缓存，消费者根据自己的处理能力去消息队列里拿数据。MQ可以以稳定的系统资源应对突发的流量冲击。</p><h2 id="三、MQ的缺点"><a href="#三、MQ的缺点" class="headerlink" title="三、MQ的缺点"></a>三、MQ的缺点</h2><h3 id="1、系统可用性降低"><a href="#1、系统可用性降低" class="headerlink" title="1、系统可用性降低"></a>1、系统可用性降低</h3><p>一旦MQ宕机，整个服务都会受到影响。</p><h3 id="2、系统复杂度提高"><a href="#2、系统复杂度提高" class="headerlink" title="2、系统复杂度提高"></a>2、系统复杂度提高</h3><p>引入MQ后数据链路变得很复杂，不容易排查问题。</p><h3 id="3、数据一致性问题"><a href="#3、数据一致性问题" class="headerlink" title="3、数据一致性问题"></a>3、数据一致性问题</h3><p>如果一个系统发消息需要多个系统协同处理，其中一些系统处理成功，一些处理失败，就会造成数据一致性问题。</p><h3 id="4、消息丢失问题"><a href="#4、消息丢失问题" class="headerlink" title="4、消息丢失问题"></a>4、消息丢失问题</h3><p>生产者、MQ服务器、消费者这三者在工作过程中都有可能丢失消息，结果会导致消息无法被正确处理，最终导致数据不一致问题。</p><h3 id="5、重复消费问题"><a href="#5、重复消费问题" class="headerlink" title="5、重复消费问题"></a>5、重复消费问题</h3><p>由于网络的不稳定性，消息重复发送，消息重复消费不可避免地发生。重复消费如果不加处理，会产生重复数据或者数据异常，对业务造成严重影响。</p><h3 id="6、消息顺序问题"><a href="#6、消息顺序问题" class="headerlink" title="6、消息顺序问题"></a>6、消息顺序问题</h3><p>如果消息队列里的数据如果是对同一个数据库进行操作，而这些操作具有先后关系，如果消费的顺序不对，就会造成数据异常问题。</p><h2 id="四、MQ的选型"><a href="#四、MQ的选型" class="headerlink" title="四、MQ的选型"></a>四、MQ的选型</h2><h3 id="1、Kafka"><a href="#1、Kafka" class="headerlink" title="1、Kafka"></a>1、Kafka</h3><p>吞吐量大(10万级别)，延迟低(ms级以内)，基于分布式架构实现高可用，消息可靠性低，容易丢数据。适合做日志采集和大数据分析。</p><h3 id="2、RabbitMQ"><a href="#2、RabbitMQ" class="headerlink" title="2、RabbitMQ"></a>2、RabbitMQ</h3><p>吞吐量一般(万级别)，延迟非常低(us级)，基于主从架构实现高可用。erlang语言难度高 ，不好定制MQ。适合小规模场景。</p><h3 id="3、RocketMQ"><a href="#3、RocketMQ" class="headerlink" title="3、RocketMQ"></a>3、RocketMQ</h3><p>吞吐量大(10万级别)，延迟低(ms级)， 基于分布式架构实现高可用，但只支持Java。几乎适合全场景。</p><h2 id="五、MQ如何保持消息不丢失"><a href="#五、MQ如何保持消息不丢失" class="headerlink" title="五、MQ如何保持消息不丢失"></a>五、MQ如何保持消息不丢失</h2><h3 id="1、消息丢失的环节"><a href="#1、消息丢失的环节" class="headerlink" title="1、消息丢失的环节"></a>1、消息丢失的环节</h3><h4 id="（1）生产者发送消息丢失"><a href="#（1）生产者发送消息丢失" class="headerlink" title="（1）生产者发送消息丢失"></a>（1）生产者发送消息丢失</h4><h4 id="（2）MQ服务器主从同步不丢失"><a href="#（2）MQ服务器主从同步不丢失" class="headerlink" title="（2）MQ服务器主从同步不丢失"></a>（2）MQ服务器主从同步不丢失</h4><h4 id="（3）MQ消息存盘不丢失"><a href="#（3）MQ消息存盘不丢失" class="headerlink" title="（3）MQ消息存盘不丢失"></a>（3）MQ消息存盘不丢失</h4><h4 id="（4）消费者消费消息不丢失"><a href="#（4）消费者消费消息不丢失" class="headerlink" title="（4）消费者消费消息不丢失"></a>（4）消费者消费消息不丢失</h4><h3 id="2、如何防止生产者发送消息不丢失"><a href="#2、如何防止生产者发送消息不丢失" class="headerlink" title="2、如何防止生产者发送消息不丢失"></a>2、如何防止生产者发送消息不丢失</h3><h4 id="（1）Kafka"><a href="#（1）Kafka" class="headerlink" title="（1）Kafka"></a>（1）Kafka</h4><p><img src="/2021/10/20/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/\image-20210828184039913.png" alt="image-20210828184039913"></p><p>生产者发送消息到MQ，如果MQ正常收到消息，则会返回一个请求去调用生产者的一个回调函数，让生产者知道MQ已经正确地收到了消息。生产者这里会启动一个定时任务，如果生产者长时间没有调用这个回调函数，生产者就会重新发送消息。</p><h4 id="（2）RocketMQ"><a href="#（2）RocketMQ" class="headerlink" title="（2）RocketMQ"></a>（2）RocketMQ</h4><p>RocketMQ在Kafka的基础上加上了事务消息的机制。以下是事务消息的定义。</p><blockquote><p>It can be thought of as a two-phase commit message implementation to ensure eventual consistency in distributed system. Transactional message ensures that the execution of local transaction and the sending of message can be performed atomically.</p></blockquote><p><img src="/2021/10/20/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/\image-20210828190735880.png" alt="image-20210828190735880"></p><p>事务消息用两阶段提交去保证分布式系统的最终一致性，它保证了本地事务和发消息这两件事情是原子性的。</p><p>以下为RocketMQ事务消息机制流程:</p><p><img src="/2021/10/20/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/\image-20210829123454095.png" alt="image-20210829123454095"></p><h3 id="（3）RabbitMQ"><a href="#（3）RabbitMQ" class="headerlink" title="（3）RabbitMQ"></a>（3）RabbitMQ</h3><p>RabbitMQ采用的是发送消息+回调+手动事务的机制。在RabbitMQ中提供了一组api，让使用者自己组织事务逻辑。但是这种方式会对channel产生阻塞，造成吞吐量下降。在3.0+版本提出了Publisher Confirm机制，跟RocketMQ的二次提交处理机制类似。</p><h2 id="3、如何防止MQ消息同步不丢失"><a href="#3、如何防止MQ消息同步不丢失" class="headerlink" title="3、如何防止MQ消息同步不丢失"></a>3、如何防止MQ消息同步不丢失</h2><h3 id="（1）RocketMQ"><a href="#（1）RocketMQ" class="headerlink" title="（1）RocketMQ"></a>（1）RocketMQ</h3><p>在rocket集群中，有同步同步，异步同步两种同步方式。</p><ul><li><p>同步同步</p><p><img src="/2021/10/20/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/\image-20210831225537359.png" alt="image-20210831225537359"></p></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;彻底理解Message-Queue-MQ&quot;&gt;&lt;a href=&quot;#彻底理解Message-Queue-MQ&quot; class=&quot;headerlink&quot; title=&quot;彻底理解Message Queue(MQ)&quot;&gt;&lt;/a&gt;彻底理解Message Queue(MQ)&lt;/h1</summary>
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>RocketMQ事务消息机制源码解析</title>
@@ -62,18 +42,18 @@
   </entry>
   
   <entry>
-    <title>操作系统</title>
-    <link href="https://harlan1997.github.io/2021/03/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    <id>https://harlan1997.github.io/2021/03/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</id>
-    <published>2021-03-20T11:22:08.000Z</published>
-    <updated>2021-03-22T09:41:12.446Z</updated>
+    <title>后端知识点总结</title>
+    <link href="https://harlan1997.github.io/2021/03/26/%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
+    <id>https://harlan1997.github.io/2021/03/26/%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</id>
+    <published>2021-03-26T08:18:49.000Z</published>
+    <updated>2022-07-27T10:43:36.906Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="什么是同步-什么是异步"><a href="#什么是同步-什么是异步" class="headerlink" title="什么是同步 什么是异步"></a>什么是同步 什么是异步</h2><p>同步：必须等对方回应我，才开始做下一件事情<br>异步：不必等对方回应我，我继续做我的事情</p><h2 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h2><p>资源分配的独立单位</p><h2 id="进程间的通信方式"><a href="#进程间的通信方式" class="headerlink" title="进程间的通信方式"></a>进程间的通信方式</h2><ul><li>管道</li><li>信号量</li><li>信号</li><li>消息队列</li><li>共享内存</li><li>套接字</li></ul><h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h2><p>资源调度的独立单位</p><h2 id="线程间的通信方式"><a href="#线程间的通信方式" class="headerlink" title="线程间的通信方式"></a>线程间的通信方式</h2><ul><li>锁 互斥锁 读写锁 自旋锁 条件变量</li><li>信号量</li><li>信号</li><li>屏障</li></ul><h2 id="线程同步"><a href="#线程同步" class="headerlink" title="线程同步"></a>线程同步</h2><p>有一个线程在对内存进行操作的时候，其他线程都不可以对这个内存地址进行操作</p><h1 id="协程"><a href="#协程" class="headerlink" title="协程"></a>协程</h1><p>实现协作式多任务，可以在程序执行内部中断，转而执行其它协程</p><ul><li>跟线程的区别：效率比线程高，因为切换不需要开销。不需要线程的锁机制。</li></ul><h2 id="多进程"><a href="#多进程" class="headerlink" title="多进程"></a>多进程</h2><p>计算机执行多个进程</p><h2 id="进程调度算法"><a href="#进程调度算法" class="headerlink" title="进程调度算法"></a>进程调度算法</h2><ul><li>先来先去</li><li>短作业优先调度</li><li>轮转法</li><li>多级反馈队列</li></ul><h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><p>一个进程中同时有多个线程正在执行</p><h2 id="多线程跟多进程的区别"><a href="#多线程跟多进程的区别" class="headerlink" title="多线程跟多进程的区别"></a>多线程跟多进程的区别</h2><ul><li>多进程：编程、调试简单，可靠性高，但创建、销毁、切换速度慢、内存资源占用高。</li><li>多线程：编程、调试复杂，可靠性差，但创建、销毁、切换速度快、内存资源占用低。</li></ul><h2 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h2><ul><li>多个进程互相等待对方资源，循环等待。</li></ul><h2 id="产生死锁的原因"><a href="#产生死锁的原因" class="headerlink" title="产生死锁的原因"></a>产生死锁的原因</h2><ul><li>资源互斥</li><li>资源不可剥夺</li><li>占有资源后还继续请求新的资源</li><li>环路等待</li></ul><h2 id="破坏死锁"><a href="#破坏死锁" class="headerlink" title="破坏死锁"></a>破坏死锁</h2><p>破坏四个必要条件之一即可。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h3 id="线性结构"><a href="#线性结构" class="headerlink" title="线性结构"></a>线性结构</h3><ul><li>线性表</li><li>栈</li><li>队列</li><li>数组</li></ul><h3 id="链式结构"><a href="#链式结构" class="headerlink" title="链式结构"></a>链式结构</h3><ul><li>单链表(链表和数组的区别)</li><li>双向链表</li><li>循环链表(约瑟夫环)</li><li>双向循环链表</li></ul><h3 id="树"><a href="#树" class="headerlink" title="树"></a>树</h3><ul><li>二叉树</li><li>二叉搜索树</li><li>AVL树</li><li>红黑树</li><li>B树</li><li>B+树</li></ul><h3 id="图"><a href="#图" class="headerlink" title="图"></a>图</h3><ul><li>邻接表</li><li>临界矩阵</li></ul><h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><ul><li>堆排序</li><li>快速排序</li><li>归并排序</li><li>冒泡排序</li><li>选择排序</li><li>插入排序</li></ul><h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><ul><li>顺序查找</li><li>二分查找</li><li>哈希查找</li><li>二叉树查找</li><li>红黑树查找</li><li>B/B+树查找</li></ul><h3 id="图搜索"><a href="#图搜索" class="headerlink" title="图搜索"></a>图搜索</h3><ul><li>BFS</li><li>DFS</li></ul><h3 id="其它算法"><a href="#其它算法" class="headerlink" title="其它算法"></a>其它算法</h3><ul><li>分治法</li><li>动态规划</li><li>贪心</li></ul>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;什么是同步-什么是异步&quot;&gt;&lt;a href=&quot;#什么是同步-什么是异步&quot; class=&quot;headerlink&quot; title=&quot;什么是同步 什么是异步&quot;&gt;&lt;/a&gt;什么是同步 什么是异步&lt;/h2&gt;&lt;p&gt;同步：必须等对方回应我，才开始做下一件事情&lt;br&gt;异步：不必等对方回</summary>
+    <summary type="html">&lt;h2 id=&quot;数据结构&quot;&gt;&lt;a href=&quot;#数据结构&quot; class=&quot;headerlink&quot; title=&quot;数据结构&quot;&gt;&lt;/a&gt;数据结构&lt;/h2&gt;&lt;h3 id=&quot;线性结构&quot;&gt;&lt;a href=&quot;#线性结构&quot; class=&quot;headerlink&quot; title=&quot;线性结构&quot;&gt;&lt;/a</summary>
       
     
     

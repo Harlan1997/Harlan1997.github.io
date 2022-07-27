@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"harlan1997.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="什么是同步 什么是异步同步：必须等对方回应我，才开始做下一件事情异步：不必等对方回应我，我继续做我的事情 进程资源分配的独立单位 进程间的通信方式 管道 信号量 信号 消息队列 共享内存 套接字  线程资源调度的独立单位 线程间的通信方式 锁 互斥锁 读写锁 自旋锁 条件变量 信号量 信号 屏障  线程同步有一个线程在对内存进行操作的时候，其他线程都不可以对这个内存地址进行操作 协程实现协作式多任">
+  <meta name="description" content="数据结构线性结构 线性表 栈 队列 数组  链式结构 单链表(链表和数组的区别) 双向链表 循环链表(约瑟夫环) 双向循环链表  树 二叉树 二叉搜索树 AVL树 红黑树 B树 B+树  图 邻接表 临界矩阵  算法排序 堆排序 快速排序 归并排序 冒泡排序 选择排序 插入排序  查找 顺序查找 二分查找 哈希查找 二叉树查找 红黑树查找 B&#x2F;B+树查找  图搜索 BFS DFS  其它算法 分治">
 <meta property="og:type" content="article">
-<meta property="og:title" content="操作系统">
-<meta property="og:url" content="https://harlan1997.github.io/2021/03/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.html">
+<meta property="og:title" content="后端知识点总结">
+<meta property="og:url" content="https://harlan1997.github.io/2021/03/26/%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="Samuel Liang&#39;s Blog">
-<meta property="og:description" content="什么是同步 什么是异步同步：必须等对方回应我，才开始做下一件事情异步：不必等对方回应我，我继续做我的事情 进程资源分配的独立单位 进程间的通信方式 管道 信号量 信号 消息队列 共享内存 套接字  线程资源调度的独立单位 线程间的通信方式 锁 互斥锁 读写锁 自旋锁 条件变量 信号量 信号 屏障  线程同步有一个线程在对内存进行操作的时候，其他线程都不可以对这个内存地址进行操作 协程实现协作式多任">
+<meta property="og:description" content="数据结构线性结构 线性表 栈 队列 数组  链式结构 单链表(链表和数组的区别) 双向链表 循环链表(约瑟夫环) 双向循环链表  树 二叉树 二叉搜索树 AVL树 红黑树 B树 B+树  图 邻接表 临界矩阵  算法排序 堆排序 快速排序 归并排序 冒泡排序 选择排序 插入排序  查找 顺序查找 二分查找 哈希查找 二叉树查找 红黑树查找 B&#x2F;B+树查找  图搜索 BFS DFS  其它算法 分治">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-03-20T11:22:08.000Z">
-<meta property="article:modified_time" content="2021-03-22T09:41:12.446Z">
+<meta property="article:published_time" content="2021-03-26T08:18:49.000Z">
+<meta property="article:modified_time" content="2022-07-27T10:43:36.906Z">
 <meta property="article:author" content="Samuel Liang">
 <meta property="article:tag" content="AI, Network Security, Quantum Computation">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://harlan1997.github.io/2021/03/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+<link rel="canonical" href="https://harlan1997.github.io/2021/03/26/%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>操作系统 | Samuel Liang's Blog</title>
+  <title>后端知识点总结 | Samuel Liang's Blog</title>
   
 
 
@@ -168,7 +168,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://harlan1997.github.io/2021/03/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+    <link itemprop="mainEntityOfPage" href="https://harlan1997.github.io/2021/03/26/%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -181,7 +181,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          操作系统
+          后端知识点总结
         </h1>
 
         <div class="post-meta">
@@ -191,14 +191,14 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2021-03-20 19:22:08" itemprop="dateCreated datePublished" datetime="2021-03-20T19:22:08+08:00">2021-03-20</time>
+              <time title="Created: 2021-03-26 16:18:49" itemprop="dateCreated datePublished" datetime="2021-03-26T16:18:49+08:00">2021-03-26</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-03-22 17:41:12" itemprop="dateModified" datetime="2021-03-22T17:41:12+08:00">2021-03-22</time>
+                <time title="Modified: 2022-07-27 18:43:36" itemprop="dateModified" datetime="2022-07-27T18:43:36+08:00">2022-07-27</time>
               </span>
 
           
@@ -212,50 +212,55 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="什么是同步-什么是异步"><a href="#什么是同步-什么是异步" class="headerlink" title="什么是同步 什么是异步"></a>什么是同步 什么是异步</h2><p>同步：必须等对方回应我，才开始做下一件事情<br>异步：不必等对方回应我，我继续做我的事情</p>
-<h2 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h2><p>资源分配的独立单位</p>
-<h2 id="进程间的通信方式"><a href="#进程间的通信方式" class="headerlink" title="进程间的通信方式"></a>进程间的通信方式</h2><ul>
-<li>管道</li>
-<li>信号量</li>
-<li>信号</li>
-<li>消息队列</li>
-<li>共享内存</li>
-<li>套接字</li>
+        <h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h3 id="线性结构"><a href="#线性结构" class="headerlink" title="线性结构"></a>线性结构</h3><ul>
+<li>线性表</li>
+<li>栈</li>
+<li>队列</li>
+<li>数组</li>
 </ul>
-<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h2><p>资源调度的独立单位</p>
-<h2 id="线程间的通信方式"><a href="#线程间的通信方式" class="headerlink" title="线程间的通信方式"></a>线程间的通信方式</h2><ul>
-<li>锁 互斥锁 读写锁 自旋锁 条件变量</li>
-<li>信号量</li>
-<li>信号</li>
-<li>屏障</li>
+<h3 id="链式结构"><a href="#链式结构" class="headerlink" title="链式结构"></a>链式结构</h3><ul>
+<li>单链表(链表和数组的区别)</li>
+<li>双向链表</li>
+<li>循环链表(约瑟夫环)</li>
+<li>双向循环链表</li>
 </ul>
-<h2 id="线程同步"><a href="#线程同步" class="headerlink" title="线程同步"></a>线程同步</h2><p>有一个线程在对内存进行操作的时候，其他线程都不可以对这个内存地址进行操作</p>
-<h1 id="协程"><a href="#协程" class="headerlink" title="协程"></a>协程</h1><p>实现协作式多任务，可以在程序执行内部中断，转而执行其它协程</p>
-<ul>
-<li>跟线程的区别：效率比线程高，因为切换不需要开销。不需要线程的锁机制。</li>
+<h3 id="树"><a href="#树" class="headerlink" title="树"></a>树</h3><ul>
+<li>二叉树</li>
+<li>二叉搜索树</li>
+<li>AVL树</li>
+<li>红黑树</li>
+<li>B树</li>
+<li>B+树</li>
 </ul>
-<h2 id="多进程"><a href="#多进程" class="headerlink" title="多进程"></a>多进程</h2><p>计算机执行多个进程</p>
-<h2 id="进程调度算法"><a href="#进程调度算法" class="headerlink" title="进程调度算法"></a>进程调度算法</h2><ul>
-<li>先来先去</li>
-<li>短作业优先调度</li>
-<li>轮转法</li>
-<li>多级反馈队列</li>
+<h3 id="图"><a href="#图" class="headerlink" title="图"></a>图</h3><ul>
+<li>邻接表</li>
+<li>临界矩阵</li>
 </ul>
-<h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><p>一个进程中同时有多个线程正在执行</p>
-<h2 id="多线程跟多进程的区别"><a href="#多线程跟多进程的区别" class="headerlink" title="多线程跟多进程的区别"></a>多线程跟多进程的区别</h2><ul>
-<li>多进程：编程、调试简单，可靠性高，但创建、销毁、切换速度慢、内存资源占用高。</li>
-<li>多线程：编程、调试复杂，可靠性差，但创建、销毁、切换速度快、内存资源占用低。</li>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><ul>
+<li>堆排序</li>
+<li>快速排序</li>
+<li>归并排序</li>
+<li>冒泡排序</li>
+<li>选择排序</li>
+<li>插入排序</li>
 </ul>
-<h2 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h2><ul>
-<li>多个进程互相等待对方资源，循环等待。</li>
+<h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><ul>
+<li>顺序查找</li>
+<li>二分查找</li>
+<li>哈希查找</li>
+<li>二叉树查找</li>
+<li>红黑树查找</li>
+<li>B/B+树查找</li>
 </ul>
-<h2 id="产生死锁的原因"><a href="#产生死锁的原因" class="headerlink" title="产生死锁的原因"></a>产生死锁的原因</h2><ul>
-<li>资源互斥</li>
-<li>资源不可剥夺</li>
-<li>占有资源后还继续请求新的资源</li>
-<li>环路等待</li>
+<h3 id="图搜索"><a href="#图搜索" class="headerlink" title="图搜索"></a>图搜索</h3><ul>
+<li>BFS</li>
+<li>DFS</li>
 </ul>
-<h2 id="破坏死锁"><a href="#破坏死锁" class="headerlink" title="破坏死锁"></a>破坏死锁</h2><p>破坏四个必要条件之一即可。</p>
+<h3 id="其它算法"><a href="#其它算法" class="headerlink" title="其它算法"></a>其它算法</h3><ul>
+<li>分治法</li>
+<li>动态规划</li>
+<li>贪心</li>
+</ul>
 
     </div>
 
@@ -336,7 +341,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%90%8C%E6%AD%A5-%E4%BB%80%E4%B9%88%E6%98%AF%E5%BC%82%E6%AD%A5"><span class="nav-number">1.</span> <span class="nav-text">什么是同步 什么是异步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">进程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">进程间的通信方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B"><span class="nav-number">4.</span> <span class="nav-text">线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F"><span class="nav-number">5.</span> <span class="nav-text">线程间的通信方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5"><span class="nav-number">6.</span> <span class="nav-text">线程同步</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%8F%E7%A8%8B"><span class="nav-number"></span> <span class="nav-text">协程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E8%BF%9B%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">多进程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">进程调度算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="nav-number">3.</span> <span class="nav-text">多线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E8%B7%9F%E5%A4%9A%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">4.</span> <span class="nav-text">多线程跟多进程的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%BB%E9%94%81"><span class="nav-number">5.</span> <span class="nav-text">死锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%A7%E7%94%9F%E6%AD%BB%E9%94%81%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="nav-number">6.</span> <span class="nav-text">产生死锁的原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A0%B4%E5%9D%8F%E6%AD%BB%E9%94%81"><span class="nav-number">7.</span> <span class="nav-text">破坏死锁</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84"><span class="nav-number">1.1.</span> <span class="nav-text">线性结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%93%BE%E5%BC%8F%E7%BB%93%E6%9E%84"><span class="nav-number">1.2.</span> <span class="nav-text">链式结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%91"><span class="nav-number">1.3.</span> <span class="nav-text">树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE"><span class="nav-number">1.4.</span> <span class="nav-text">图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F"><span class="nav-number">2.1.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE"><span class="nav-number">2.2.</span> <span class="nav-text">查找</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E6%90%9C%E7%B4%A2"><span class="nav-number">2.3.</span> <span class="nav-text">图搜索</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E5%AE%83%E7%AE%97%E6%B3%95"><span class="nav-number">2.4.</span> <span class="nav-text">其它算法</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -350,7 +355,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
