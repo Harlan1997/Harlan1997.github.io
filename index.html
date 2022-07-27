@@ -165,6 +165,100 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://harlan1997.github.io/2022/07/27/Operating-Systems-Three-Easy-Pieces%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0-%E4%B8%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Samuel Liang">
+      <meta itemprop="description" content="Student of CSE department, SUSTech">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Samuel Liang's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/07/27/Operating-Systems-Three-Easy-Pieces%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0-%E4%B8%80/" class="post-title-link" itemprop="url">Operating Systems: Three Easy Pieces阅读笔记(一) Introduction</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2022-07-27 19:01:35 / Modified: 21:07:27" itemprop="dateCreated datePublished" datetime="2022-07-27T19:01:35+08:00">2022-07-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Notes/" itemprop="url" rel="index"><span itemprop="name">Notes</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Operating-System"><a href="#Operating-System" class="headerlink" title="Operating System"></a>Operating System</h2><h3 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h3><p>Operating system is a body of software which is responsible for making sure the system operates correctly and efficiently in an easy-to-use manner. Operating system acchieve this goal through a general techenique that we call <strong>virtualization</strong>.</p>
+<h3 id="Responsibility-of-the-OS"><a href="#Responsibility-of-the-OS" class="headerlink" title="Responsibility of the OS"></a>Responsibility of the OS</h3><p>Make it easy to run programs, allow programs to share memory, enable programs to interact with diveces,.etc.</p>
+<h3 id="Four-Themes-of-This-Book"><a href="#Four-Themes-of-This-Book" class="headerlink" title="Four Themes of This Book"></a>Four Themes of This Book</h3><ol>
+<li>Virtualization</li>
+<li>Concurrency</li>
+<li>Persistence</li>
+</ol>
+<h2 id="Virtualzition"><a href="#Virtualzition" class="headerlink" title="Virtualzition"></a>Virtualzition</h2><h3 id="Definition-1"><a href="#Definition-1" class="headerlink" title="Definition"></a>Definition</h3><p>Transform physical resources into a more general, powerful and easy-to-use virtual form of itself.</p>
+<h3 id="Virtualizing-The-CPU"><a href="#Virtualizing-The-CPU" class="headerlink" title="Virtualizing The CPU"></a>Virtualizing The CPU</h3><p>Turning a single CPU into a seemingly infinite number of CPUs and thus allowing many programs to seemingly run at the same time </p>
+<h3 id="Virtualizing-The-Memory"><a href="#Virtualizing-The-Memory" class="headerlink" title="Virtualizing The Memory"></a>Virtualizing The Memory</h3><p>Each process accesses its own private virtual address space, which the OS somehow maps onto the physical address of the machine.</p>
+<h4 id="Note-Physical-Memory-Model"><a href="#Note-Physical-Memory-Model" class="headerlink" title="Note: Physical Memory Model"></a>Note: Physical Memory Model</h4><p>Memory is just an array of bytes; to read memory, one must specify an address to be access the data stored there; to write memory, one must specify the data to be written to the given address.</p>
+<h2 id="Concurrency"><a href="#Concurrency" class="headerlink" title="Concurrency"></a>Concurrency</h2><h3 id="Definition-2"><a href="#Definition-2" class="headerlink" title="Definition"></a>Definition</h3><p>A host of problems that arise when working on many things at onces in the same program.</p>
+<h3 id="Senario"><a href="#Senario" class="headerlink" title="Senario"></a>Senario</h3><p>Use two threads to increment a shared variable in a loop. As the number of interation set to 1000, the final value is 2000 as expected. When the number of iteraction set to 100000, the correct answer is not guaranteed.</p>
+<h3 id="Cause"><a href="#Cause" class="headerlink" title="Cause"></a>Cause</h3><p>The increment process takes 3 instructions: load the value of the vairable from memory into a register, increment, store it back to memory. These instructions do not execute atomically.</p>
+<h2 id="Persistence"><a href="#Persistence" class="headerlink" title="Persistence"></a>Persistence</h2><h3 id="File-System"><a href="#File-System" class="headerlink" title="File System"></a>File System</h3><p>File System is responsible for storing any files the user creates in a reliable and efficient manner on the disk of the system.</p>
+<h3 id="Standard-Library"><a href="#Standard-Library" class="headerlink" title="Standard Library"></a>Standard Library</h3><p>OS provides uniform library to make it easy to access devices through system calls.</p>
+<h3 id="Performance-Optimization"><a href="#Performance-Optimization" class="headerlink" title="Performance Optimization"></a>Performance Optimization</h3><p>Most file system delay writes for a while, hoping to batch them to a larger group.</p>
+<h3 id="Reliability-Opimization"><a href="#Reliability-Opimization" class="headerlink" title="Reliability Opimization"></a>Reliability Opimization</h3><p>To handle the problems of system crashes during writes, most file system incorporate some kind of intricate write protocol like copy-on-write to ensure that if failure occurs during writing sequence, the system can recover to a reasonable state afterwards.</p>
+<h2 id="Design-Goals-of-Operating-System"><a href="#Design-Goals-of-Operating-System" class="headerlink" title="Design Goals of Operating System"></a>Design Goals of Operating System</h2><ul>
+<li>Abstraction</li>
+<li>Minimize the overhead</li>
+<li>Protection between application(Isolation)</li>
+<li>Reliability</li>
+<li>Security</li>
+<li>Mobility</li>
+<li>Energy-efficiency</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://harlan1997.github.io/2021/10/20/RocketMQ%E4%BA%8B%E5%8A%A1%E6%B6%88%E6%81%AF%E6%9C%BA%E5%88%B6%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -254,119 +348,6 @@
 <p><img src="/2021/10/20/RocketMQ%E4%BA%8B%E5%8A%A1%E6%B6%88%E6%81%AF%E6%9C%BA%E5%88%B6%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/image-20210831214240963.png" alt="image-20210831214240963"></p>
 <p>对于半消息队列来说来说 <code>min offset</code>就是当前消费进度，<code>max offset</code>是最后一个消息的offset。对于op消息队列来说，<code>queue offset</code>当前op消息的内容，也就是在半消息中的offset。<code>max offset</code>最大是32，因为我们一次最多pull32个op消息到op消息队列。这个方法会遍历整个op消息队列，每次获取当前消息的内容<code>queue offset</code>然后跟<code>min offset</code>去比对，如果<code>queue offset &lt; min offset</code>说明这个消息已经是已经被处理过了，不用再管。其余的按照key为半消息队列offset， value为op消息队列offset插入removeMap，说明key对应的半消息不需要回查。</p>
 <p>在填充完<code>removeMap</code>后会进入一个循环 ，从<code>halfOffset</code>开始去遍历半消息，<code>removeMap</code>的key包含这个offset，说明这个offset对应的半消息已经被commit或者rollback了，不需要回查，执行下一个offset+1对应 半消息的检查。如果是不在<code>removeMap</code>里面，就用<code>needDiscard</code>去判断这个消息有没有超过最大回查次数15次，如果超过15次了那就不查了。同时要判断这个半消息存盘后有没有超过72个小时，因为超过72小时这个半消息会被丢弃。接下来有一个<code>checkImmunityTimeStr</code>，这个是回查免疫时间，就是消息存盘后这个回查免疫时间内是不进行回查的。如果在这个时间内，而且而且是首次回查，就不进行回查。如果是生产者没有设置首次回查免疫时间，如果在免疫时间内就跳过当前半消息以及后续所有的的半消息的回查，因为同一个consumer中的消息是有顺序的。如果前面条件都满足，就调用<code>putBackHalfMsgQueue</code>再次存盘。因为这次回查是否能够确定状态是不知道的，为了下一次回查，将这个半消息再次存盘。然后调用<code>resolveHalfMsg</code>进行回查逻辑。每次回查结束都更新半消息队列和op消息队列。这个while循环是有时间限制的，如果超过时间限制则会跳出循环。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://harlan1997.github.io/2021/03/26/%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Samuel Liang">
-      <meta itemprop="description" content="Student of CSE department, SUSTech">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Samuel Liang's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/26/%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">后端知识点总结</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-03-26 16:18:49" itemprop="dateCreated datePublished" datetime="2021-03-26T16:18:49+08:00">2021-03-26</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-07-27 18:43:36" itemprop="dateModified" datetime="2022-07-27T18:43:36+08:00">2022-07-27</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h3 id="线性结构"><a href="#线性结构" class="headerlink" title="线性结构"></a>线性结构</h3><ul>
-<li>线性表</li>
-<li>栈</li>
-<li>队列</li>
-<li>数组</li>
-</ul>
-<h3 id="链式结构"><a href="#链式结构" class="headerlink" title="链式结构"></a>链式结构</h3><ul>
-<li>单链表(链表和数组的区别)</li>
-<li>双向链表</li>
-<li>循环链表(约瑟夫环)</li>
-<li>双向循环链表</li>
-</ul>
-<h3 id="树"><a href="#树" class="headerlink" title="树"></a>树</h3><ul>
-<li>二叉树</li>
-<li>二叉搜索树</li>
-<li>AVL树</li>
-<li>红黑树</li>
-<li>B树</li>
-<li>B+树</li>
-</ul>
-<h3 id="图"><a href="#图" class="headerlink" title="图"></a>图</h3><ul>
-<li>邻接表</li>
-<li>临界矩阵</li>
-</ul>
-<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><ul>
-<li>堆排序</li>
-<li>快速排序</li>
-<li>归并排序</li>
-<li>冒泡排序</li>
-<li>选择排序</li>
-<li>插入排序</li>
-</ul>
-<h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><ul>
-<li>顺序查找</li>
-<li>二分查找</li>
-<li>哈希查找</li>
-<li>二叉树查找</li>
-<li>红黑树查找</li>
-<li>B/B+树查找</li>
-</ul>
-<h3 id="图搜索"><a href="#图搜索" class="headerlink" title="图搜索"></a>图搜索</h3><ul>
-<li>BFS</li>
-<li>DFS</li>
-</ul>
-<h3 id="其它算法"><a href="#其它算法" class="headerlink" title="其它算法"></a>其它算法</h3><ul>
-<li>分治法</li>
-<li>动态规划</li>
-<li>贪心</li>
-</ul>
 
       
     </div>
@@ -611,13 +592,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
